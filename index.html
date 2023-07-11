@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validasyon Örneği</title>
+
+    <style>
+        #form1 ul li.error input {
+            border-bottom-color: orangared;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="" id="form1" novalidate>
+        <ul>
+            <li>
+                <label for="">Kullanıcı adı</label>
+                <input type="text" name="username" required>
+            </li>
+            <li>
+                <label for="">E-posta</label>
+                <input type="email" name="email" required>
+            </li>
+            <li>
+                <label for="">Şifre adı</label>
+                <input type="password" name="password" required>
+            </li>
+            <li>
+                <label for="">Github url</label>
+                <input type="url" name="githubUrl" required>
+            </li>
+            <li>
+                <label for="">Fotoğrafın</label>
+                <input type="file" name="photo" required>
+            </li>
+            <li>
+                <label for="">Bilgi düzeyi</label>
+                <select name="knowledge" required>
+                    <option value="">Seçin</option>
+                    <option value="1">Kötü</option>
+                    <option value="2">Orta</option>
+                    <option value="3">İyi</option>
+                    <option value="4">Çok iyi</option>
+                </select>
+            </li>
+            <li>
+                <label for="">Hakkınızda</label> <br>
+                <textarea name="about" id="" cols="30" rows="10" required></textarea>
+            </li>
+            <li>
+                <label for="">Cinsiyet</label>
+                <div class="radio-container">
+                    <input type="radio" required name="gender" value="1">
+                    <input type="radio" required name="gender" value="2">
+                </div>
+            </li>
+
+            <li>
+                <label for="">Kurallar</label>
+                <div class="checkbox-container">
+                    <input type="checkbox" required name="rules">
+                    Kuralları okuudm ve kabul ediyorum
+                </div>
+            </li>
+            <li>
+                <button type="submit">Gönder</button>
+            </li>
+        </ul>
+    </form>
+
+
+    <form action="" id="form2" novalidate>
+        <ul>
+            <li>
+                <input type="text" name="name" required>
+            </li>
+            <li>
+                <button type="submit">Gönder</button>
+            </li>
+        </ul>
+    </form>
+    
+    <script src="validation.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
