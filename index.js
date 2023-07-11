@@ -16,7 +16,7 @@ form1.addEventListener('submit', function(e) {
     this.isFormValidAndSend()
 });
 
-form1.getResult('ajax.php', function(response) {
+form1.getResult(function(response) {
     console.log(response.currentTarget.response)
 });
 
@@ -29,6 +29,6 @@ form2.addEventListener('submit', function(e) {
     this.isFormValidAndSend()
 })
 
-form2.getResult('ajax2.php', function(response) {
+form2.getResult(function(response) {
     console.log(response.currentTarget.response)
 })

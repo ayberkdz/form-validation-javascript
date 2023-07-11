@@ -54,11 +54,11 @@ HTMLElement.prototype.isFormValidAndSend = function() {
     }
 }
 
-HTMLElement.prototype.getResult = function(url, callback) {
+HTMLElement.prototype.getResult = function(callback) {
     this.addEventListener('formdata', function(e) {
         const data = e.formData
         var request = new XMLHttpRequest()
-        request.open('POST', url)
+        request.open('POST', this.action)
         // request.addEventListener('load', function(response) {
         //     console.log(response.currentTarget.response)
         // })
